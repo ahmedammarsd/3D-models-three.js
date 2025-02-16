@@ -1,25 +1,25 @@
 import { Center, OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Suspense, useRef } from "react";
-import { DirectionalLight, MeshLambertMaterial } from "three";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
+
 import MobileScreen from "./MobileScreen";
 import CanvasLoader from "./CanvasLoader";
 
-const RotatingCube = () => {
-  const meshRef = useRef();
-  useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x += 0.01;
-      meshRef.current.rotation.y += 0.01;
-    }
-  });
-  return (
-    <mesh ref={meshRef}>
-      <cylinderGeometry args={[1, 1, 1]} />
-      <meshLambertMaterial color="#468585" emissive="#468585" />
-    </mesh>
-  );
-};
+// const RotatingCube = () => {
+//   const meshRef = useRef();
+//   useFrame(() => {
+//     if (meshRef.current) {
+//       meshRef.current.rotation.x += 0.01;
+//       meshRef.current.rotation.y += 0.01;
+//     }
+//   });
+//   return (
+//     <mesh ref={meshRef}>
+//       <cylinderGeometry args={[1, 1, 1]} />
+//       <meshLambertMaterial color="#468585" emissive="#468585" />
+//     </mesh>
+//   );
+// };
 const CollectionModels = () => {
   return (
     <Canvas>

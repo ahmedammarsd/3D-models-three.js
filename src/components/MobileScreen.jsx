@@ -6,7 +6,6 @@ Source: https://sketchfab.com/3d-models/iphone-12-pro-05dfc991665e45c68c8b706213
 Title: iPhone 12 Pro
 */
 
-import React, { useRef } from "react";
 import { useGLTF, useTexture } from "@react-three/drei";
 
 const MobileScreen = (props) => {
